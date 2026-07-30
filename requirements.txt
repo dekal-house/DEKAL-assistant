@@ -1,0 +1,27 @@
+# Interface graphique
+kivy==2.3.0
+
+# Pont Python <-> Java/Android (accès aux API natives)
+pyjnius==1.6.1
+
+# Accès multiplateforme aux fonctionnalités du téléphone (GPS, SMS, notifications...)
+plyer==2.1.0
+
+# Reconnaissance vocale hors ligne (moteur principal)
+vosk==0.3.45
+
+# Reconnaissance vocale alternative (plus précise, plus lourde)
+openai-whisper==20231117
+
+# Capture audio (utile en développement desktop ; sur Android le flux
+# audio natif est géré par audiostream / plyer)
+sounddevice==0.4.7
+numpy==1.26.4
+
+# Empaquetage Android (génère l'APK à partir de ce projet Python)
+buildozer==1.5.0
+cython==0.29.36
+
+# Optionnel : futures fonctions de vision par ordinateur
+# opencv-python==4.10.0.84
+# tflite-runtime==2.14.0
