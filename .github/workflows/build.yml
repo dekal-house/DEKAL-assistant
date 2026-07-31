@@ -26,6 +26,7 @@ jobs:
 
     - name: Build APK with Buildozer
       run: |
+        export BUILDOZER_ALLOW_KIVY_BUILD_0=1
         buildozer init
         sed -i 's/title = My Application/title = DEKAL Assistant/g' buildozer.spec
         sed -i 's/package.name = myapp/package.name = dekalassistant/g' buildozer.spec
