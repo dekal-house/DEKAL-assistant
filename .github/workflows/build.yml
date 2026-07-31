@@ -27,7 +27,13 @@ jobs:
     - name: Build APK with Buildozer
       run: |
         buildozer init
-        sed -i 's/requirements = python3,kivy/requirements = python3,kivy/g' buildozer.spec
+        # Configurer le nom et les prérequis de l'application
+        sed -i 's/title = My Application/title = DEKAL Assistant/g' buildozer.spec
+        sed -i 's/package.name = myapp/package.name = dekalassistant/g' buildozer.spec
+        sed -i 's/package.domain = org.test/package.domain = org.dekal/g' buildozer.spec
+        sed -i 's/requirements = python3,kivy/requirements = python3,kivy,vosk/g' buildozer.spec
+        
+        # Lancer la compilation
         buildozer -v android debug
 
     - name: Upload APK Artifact
